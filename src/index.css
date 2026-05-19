@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #00c2ff;
+  --color-secondary: #dd0bff;
+  --color-dark: #111111;
+}
+
+@layer components {
+  .primary-btn {
+    @apply bg-linear-to-r from-primary to-secondary
+    duration-300 py-2 px-6 text-white rounded-full
+    hover:scale-105;
+  }
+}
+
+.animated-wrapper {
+  animation-name: move-wrapper;
+  animation-duration: 25 s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  position: absolute;
+}
+
+@keyframes move-wrapper {
+  0% {
+    transform: translate(150%, 30%) rotate(0) scale(0.8);
+  }
+  50% {
+    transform: translate(60vw, 0vh) rotate(150deg) scale(1.2);
+  }
+  to {
+    transform: translate(40vw, 40vh) rotate(0deg) scale(0.8);
+  }
+}
