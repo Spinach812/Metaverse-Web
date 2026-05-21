@@ -56,6 +56,7 @@ const Navbar: React.FC = () => {
                         href={link}
                         className="text-xl font-semibold 
                           hover:text-primary py-2 
+                          hover:border-b-2
                           hover:border-secondary
                           transition-colors duration-500"
                       >

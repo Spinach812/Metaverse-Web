@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
 @import "tailwindcss";
 
 @variant dark (&:where(.dark, .dark *));
@@ -6,6 +7,7 @@
   --color-primary: #00c2ff;
   --color-secondary: #dd0bff;
   --color-dark: #111111;
+  --font-parisienne: "Parisienne", sans-serif;
 }
 
 @layer components {
@@ -18,7 +20,7 @@
 
 .animated-wrapper {
   animation-name: move-wrapper;
-  animation-duration: 25 s;
+  animation-duration: 25s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
