@@ -1,7 +1,8 @@
 import HeroLogo from "../../assets/hero.png";
 import { BiPlayCircle } from "react-icons/bi";
+import { type PopupPlayerProps } from "../PopupPlayer/PopupPlayer";
 
-const Hero = () => {
+const Hero = ({ tooglePlay }: Omit<PopupPlayerProps, "isPlay">) => {
   return (
     <>
       <div
@@ -14,27 +15,42 @@ const Hero = () => {
             sm:grid-cols-2 gap-6 place-items-center relative z-10"
           >
             <div className=" order-2 sm:order-1 space-y-5 lg:pr-20">
-              <h1 className="text-4xl font-semibold">
+              <h1 data-aos="fade-up" className="text-4xl font-semibold">
                 GET READY TO ENJOY VR{" "}
                 <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
                   GAME WITH OUR PLATFORM
                 </span>
               </h1>
-              <p>
+              <p data-aos="fade-up" data-aos-delay="300">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
                 dicta est enim dolorem nulla. Illum laboriosam quasi eius enim
                 deserunt distinctio porro minus mollitia iure maiores,
                 necessitatibus voluptate suscipit aliquid.
               </p>
               <div className="flex gap-10">
-                <button className="primary-btn">Get Started</button>
-                <button className="flex items-center gap-2">
+                <button
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  className="primary-btn"
+                >
+                  Get Started
+                </button>
+                <button
+                  data-aos="fade-up"
+                  data-aos-delay="700"
+                  className="flex items-center gap-2"
+                  onClick={tooglePlay}
+                >
                   <BiPlayCircle className="text-3xl" />
                   See Demo
                 </button>
               </div>
             </div>
-            <div className="order-1 sm:order-2">
+            <div
+              data-aos="fade-up"
+              data-aos-offset="0"
+              className="order-1 sm:order-2"
+            >
               <img src={HeroLogo} alt="HeroPng" className="max-h-150" />
             </div>
           </div>

@@ -5,8 +5,9 @@ const Quotes = () => {
     <>
       <div className="container py-14 px-4 sm:px-6 lg:px-8">
         <h1
+          data-aos="zoom-in"
           className="text-2xl sm:text-4xl font-bold max-w-162 
-        mx-auto text-center font-parisienne"
+          mx-auto text-center font-parisienne"
         >
           "Virtual reality is a medium, a means by which humans can share ideas
           and experiences."
